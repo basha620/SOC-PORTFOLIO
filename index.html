@@ -1,1 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Syed Gouse Basha | SOC Analyst Portfolio</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#0a0f1c;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar{
+      width:8px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background:#00ffcc;
+      border-radius:10px;
+    }
+
+    /* Navbar */
+    nav{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:1000;
+      background:rgba(0,0,0,0.6);
+      backdrop-filter:blur(10px);
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h2{
+      color:#00ffcc;
+      font-size:28px;
+      letter-spacing:1px;
+    }
+
+    nav ul{
+      display:flex;
+      gap:30px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+      font-weight:500;
+    }
+
+    nav ul li a:hover{
+      color:#00ffcc;
+    }
+
+    /* Hero Section */
+    .hero{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:0 10%;
+      background:
+      linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+      url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero-content h1{
+      font-size:65px;
+      margin-bottom:10px;
+    }
+
+    .hero-content h1 span{
+      color:#00ffcc;
+    }
+
+    .hero-content h3{
+      font-size:30px;
+      color:#ccc;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      max-width:750px;
+      margin:auto;
+      line-height:1.8;
+      color:#ddd;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:35px;
+      padding:14px 35px;
+      background:#00ffcc;
+      color:#000;
+      font-weight:600;
+      border-radius:50px;
+      text-decoration:none;
+      transition:0.3s;
+      box-shadow:0 0 20px #00ffcc;
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+      box-shadow:0 0 40px #00ffcc;
+    }
+
+    section{
+      padding:100px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:45px;
+      margin-bottom:60px;
+      color:#00ffcc;
+    }
+
+    /* About */
+    .about{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+      align-items:center;
+    }
+
+    .about-box{
+      background:#111827;
+      padding:40px;
+      border-radius:20px;
+      transition:0.3s;
+      border:1px solid rgba(255,255,255,0.1);
+    }
+
+    .about-box:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 20px rgba(0,255,204,0.3);
+    }
+
+    /* Skills */
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+    }
+
+    .skill-card{
+      background:#111827;
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+      transition:0.3s;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .skill-card:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 25px rgba(0,255,204,0.3);
+    }
+
+    .skill-card h3{
+      color:#00ffcc;
+      margin-bottom:15px;
+    }
+
+    /* Projects */
+    .project-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+    }
+
+    .project-card{
+      background:#111827;
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .project-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 30px rgba(0,255,204,0.25);
+    }
+
+    .project-card h3{
+      color:#00ffcc;
+      margin-bottom:15px;
+    }
+
+    .project-card p{
+      color:#ccc;
+      line-height:1.7;
+    }
+
+    /* Contact */
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:15px 0;
+      font-size:18px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      background:#050b16;
+      color:#999;
+    }
+
+    @media(max-width:768px){
+
+      .hero-content h1{
+        font-size:45px;
+      }
+
+      .hero-content h3{
+        font-size:22px;
+      }
+
+      nav ul{
+        display:none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>SYED GOUSE BASHA</h2>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Hi, I'm <span>Syed Gouse Basha</span></h1>
+
+      <h3>SOC Analyst | Cybersecurity Enthusiast</h3>
+
+      <p>
+        Passionate Cybersecurity fresher with hands-on experience in
+        threat monitoring, vulnerability assessment, malware development & analysis using AI, 
+        and incident response. Skilled in tools like
+        Wireshark, Nmap, Burp Suite, Nessus, and Kali Linux.
+      </p>
+
+      <a href="#contact" class="btn">Hire Me</a>
+      <a href="resume.pdf" download class="btn">
+  Download Resume
+</a>
+
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+
+      <div class="about-box">
+        <h3>Who Am I?</h3>
+        <br>
+        <p>
+          I am a cybersecurity fresher focused on SOC operations,
+          threat analysis, vulnerability assessment & ethical hacking.  
+          I enjoy learning modern security technologies and improving
+          my cybersecurity skills through hands-on practice.
+        </p>
+      </div>
+
+      <div class="about-box">
+        <h3>Career Objective</h3>
+        <br>
+        <p>
+          Seeking an entry-level SOC Analyst role where I can contribute
+          to organizational security by monitoring threats,
+          analyzing suspicious activities, and supporting incident response operations.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <h3>SOC Operations</h3>
+        <p>Threat Monitoring, Alert Triage, Incident Response</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Networking</h3>
+        <p>TCP/IP, DNS, HTTP/HTTPS, OSI Model</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Security Tools</h3>
+        <p>Wireshark, Nmap, Burp Suite, Nessus & all other prebuilt tools</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Operating Systems</h3>
+        <p>Kali Linux, Parrot OS, Windows</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Cybersecurity</h3>
+        <p>MITRE ATT&CK, OWASP Top 10 methods, malware simulations & custom tools development using AI</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <p>Python Basics, HTML, CSS, PHP</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3>Malware Analysis & Security Monitoring</h3>
+
+        <p>
+          Performed malware behavior analysis in a controlled lab
+          environment and monitored suspicious system activities using
+          cybersecurity monitoring techniques.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Android malware detection using AI</h3>
+
+        <p>
+          Developed Android malware detection tool using Ai (academic project)
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates">
+
+    <h2 class="section-title">Certificates</h2>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3>
+          <a href="certificates/google-cybersecurity.pdf" target="_blank" style="color:#00ffcc; text-decoration:none;">
+            Google Cybersecurity Certificate
+          </a>
+        </h3>
+
+        <p>
+          Click the certificate name to view/download the certificate.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>
+          <a href="certificates/ethical-hacking.pdf" target="_blank" style="color:#00ffcc; text-decoration:none;">
+            Ethical Hacking Certificate
+          </a>
+        </h3>
+
+        <p>
+          Click the certificate name to view/download the certificate.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>
+          <a href="certificates/network-security.pdf" target="_blank" style="color:#00ffcc; text-decoration:none;">
+            Network Security Certificate
+          </a>
+        </h3>
+
+        <p>
+          Click the certificate name to view/download the certificate.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <p>
+  📧 
+  <a href="mailto:syedgousebasha29@gmail.com" 
+     style="color:#00ffcc; text-decoration:none;">
+     syedgousebasha29@gmail.com
+  </a>
+</p>
+    <p>
+  📞 
+  <a href="tel:+919177845971" 
+     style="color:#00ffcc; text-decoration:none;">
+     +91 9177845971
+  </a>
+</p>
+    <p>📍 Nellore, Andhra Pradesh, India</p>
+
+    <a href="https://www.linkedin.com/in/syed-gouse-basha-161423382" target="_blank" class="btn">
+      LinkedIn Profile
+    </a>
+    <a href="https://github.com/basha620" target="_blank" class="btn">
+  GitHub Profile
+</a>
+    <a href="https://www.instagram.com/ig.syed_gouse_basha?igsh=MW15dHNmbjBzdmF0bA==" target="_blank" class="btn">
+      instagram profile
+    </a>
+
+  </section>
+
+  <footer>
+    © 2026 Syed Gouse Basha | SOC Analyst Portfolio
+  </footer>
+
+</body>
+</html>
