@@ -12,6 +12,8 @@ body{
   overflow-x:hidden;
 }
 
+/* Scrollbar */
+
 ::-webkit-scrollbar{
   width:8px;
 }
@@ -20,6 +22,8 @@ body{
   background:#00ffcc;
   border-radius:10px;
 }
+
+/* Navbar */
 
 nav{
   position:fixed;
@@ -36,6 +40,8 @@ nav{
 
 nav h2{
   color:#00ffcc;
+  font-size:28px;
+  letter-spacing:1px;
 }
 
 nav ul{
@@ -47,7 +53,15 @@ nav ul{
 nav ul li a{
   color:white;
   text-decoration:none;
+  transition:0.3s;
+  font-weight:500;
 }
+
+nav ul li a:hover{
+  color:#00ffcc;
+}
+
+/* Hero Section */
 
 .hero{
   height:100vh;
@@ -59,11 +73,14 @@ nav ul li a{
   background:
   linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
   url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop');
+
   background-size:cover;
+  background-position:center;
 }
 
 .hero-content h1{
   font-size:65px;
+  margin-bottom:10px;
 }
 
 .hero-content h1 span{
@@ -71,31 +88,42 @@ nav ul li a{
 }
 
 .hero-content h3{
-  margin:20px 0;
+  font-size:30px;
   color:#ccc;
+  margin-bottom:20px;
 }
 
 .hero-content p{
-  max-width:700px;
+  max-width:750px;
+  margin:auto;
   line-height:1.8;
+  color:#ddd;
 }
+
+/* Buttons */
 
 .btn{
   display:inline-block;
   margin-top:20px;
   margin-right:10px;
-  padding:14px 30px;
+  padding:14px 35px;
   background:#00ffcc;
-  color:black;
+  color:#000000;
+  font-weight:700;
+  font-size:16px;
   border-radius:50px;
   text-decoration:none;
-  font-weight:600;
+  border:none;
   transition:0.3s;
+  box-shadow:0 0 20px #00ffcc;
 }
 
 .btn:hover{
   transform:translateY(-5px);
+  box-shadow:0 0 40px #00ffcc;
 }
+
+/* Sections */
 
 section{
   padding:100px 10%;
@@ -103,26 +131,93 @@ section{
 
 .section-title{
   text-align:center;
+  font-size:45px;
   margin-bottom:60px;
   color:#00ffcc;
-  font-size:45px;
 }
 
-.about,
-.skills-grid,
-.project-grid{
+/* About */
+
+.about{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
+  align-items:center;
+}
+
+.about-box{
+  background:#111827;
+  padding:40px;
+  border-radius:20px;
+  transition:0.3s;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.about-box:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 20px rgba(0,255,204,0.3);
+}
+
+/* Skills */
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.skill-card{
+  background:#111827;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  transition:0.3s;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.skill-card:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 25px rgba(0,255,204,0.3);
+}
+
+.skill-card h3{
+  color:#00ffcc;
+  margin-bottom:15px;
+}
+
+/* Projects & Certificates */
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:30px;
 }
 
-.about-box,
-.skill-card,
 .project-card{
   background:#111827;
   padding:30px;
   border-radius:20px;
+  transition:0.3s;
+  border:1px solid rgba(255,255,255,0.08);
+  text-align:center;
 }
+
+.project-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 30px rgba(0,255,204,0.25);
+}
+
+.project-card h3{
+  color:#00ffcc;
+  margin-bottom:20px;
+}
+
+.project-card p{
+  color:#ccc;
+  line-height:1.7;
+}
+
+/* Contact */
 
 .contact{
   text-align:center;
@@ -130,12 +225,15 @@ section{
 
 .contact p{
   margin:15px 0;
+  font-size:18px;
 }
 
 .contact a{
   color:#00ffcc;
   text-decoration:none;
 }
+
+/* Footer */
 
 footer{
   text-align:center;
@@ -144,14 +242,41 @@ footer{
   color:#999;
 }
 
+/* Responsive */
+
 @media(max-width:768px){
+
+  nav{
+    padding:20px 5%;
+  }
 
   nav ul{
     display:none;
   }
 
   .hero-content h1{
-    font-size:42px;
+    font-size:45px;
+  }
+
+  .hero-content h3{
+    font-size:22px;
+  }
+
+  .section-title{
+    font-size:35px;
+  }
+
+  .btn{
+    display:block;
+    width:80%;
+    margin:15px auto;
+    text-align:center;
+  }
+
+  .about,
+  .skills-grid,
+  .project-grid{
+    grid-template-columns:1fr;
   }
 
 }
