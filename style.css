@@ -108,7 +108,7 @@ nav ul li a:hover{
   margin-right:10px;
   padding:14px 35px;
   background:#00ffcc;
-  color:#000 !important;
+  color:#000000 !important;
   font-weight:700;
   font-size:16px;
   border-radius:50px;
@@ -116,13 +116,12 @@ nav ul li a:hover{
   border:none;
   transition:0.3s;
   box-shadow:0 0 20px #00ffcc;
-  opacity:1 !important;
 }
 
 .btn:hover{
   transform:translateY(-5px);
   box-shadow:0 0 40px #00ffcc;
-  color:#000 !important;
+  color:#000000 !important;
 }
 
 /* Sections */
@@ -230,7 +229,9 @@ section{
   font-size:18px;
 }
 
-.contact a{
+/* ONLY email & phone links */
+
+.contact p a{
   color:#00ffcc;
   text-decoration:none;
 }
