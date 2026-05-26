@@ -108,19 +108,21 @@ nav ul li a:hover{
   margin-right:10px;
   padding:14px 35px;
   background:#00ffcc;
-  color:#000000;
+  color:#000 !important;
   font-weight:700;
   font-size:16px;
   border-radius:50px;
-  text-decoration:none;
+  text-decoration:none !important;
   border:none;
   transition:0.3s;
   box-shadow:0 0 20px #00ffcc;
+  opacity:1 !important;
 }
 
 .btn:hover{
   transform:translateY(-5px);
   box-shadow:0 0 40px #00ffcc;
+  color:#000 !important;
 }
 
 /* Sections */
