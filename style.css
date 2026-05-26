@@ -1,1 +1,157 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
 
+body{
+  font-family:'Poppins',sans-serif;
+  background:#0a0f1c;
+  color:white;
+  overflow-x:hidden;
+}
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#00ffcc;
+  border-radius:10px;
+}
+
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:1000;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav h2{
+  color:#00ffcc;
+}
+
+nav ul{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
+
+nav ul li a{
+  color:white;
+  text-decoration:none;
+}
+
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 10%;
+  background:
+  linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+  url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1470&auto=format&fit=crop');
+  background-size:cover;
+}
+
+.hero-content h1{
+  font-size:65px;
+}
+
+.hero-content h1 span{
+  color:#00ffcc;
+}
+
+.hero-content h3{
+  margin:20px 0;
+  color:#ccc;
+}
+
+.hero-content p{
+  max-width:700px;
+  line-height:1.8;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  margin-right:10px;
+  padding:14px 30px;
+  background:#00ffcc;
+  color:black;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-5px);
+}
+
+section{
+  padding:100px 10%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+  color:#00ffcc;
+  font-size:45px;
+}
+
+.about,
+.skills-grid,
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
+.about-box,
+.skill-card,
+.project-card{
+  background:#111827;
+  padding:30px;
+  border-radius:20px;
+}
+
+.contact{
+  text-align:center;
+}
+
+.contact p{
+  margin:15px 0;
+}
+
+.contact a{
+  color:#00ffcc;
+  text-decoration:none;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:#050b16;
+  color:#999;
+}
+
+@media(max-width:768px){
+
+  nav ul{
+    display:none;
+  }
+
+  .hero-content h1{
+    font-size:42px;
+  }
+
+}
